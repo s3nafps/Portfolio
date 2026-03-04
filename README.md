@@ -18,6 +18,7 @@ A professional, dark-themed developer portfolio built with **Next.js 16 (App Rou
 
 This portfolio is purpose-built to showcase enterprise-grade infrastructure and automation projects:
 * **GCP-Fortress-Architecture:** Highly available, private-only Google Cloud web architecture deployed via Terraform with CI/CD.
+* **GCP-Kube-Vanguard:** Secure Google Kubernetes Engine (GKE) deployment featuring private cluster topology and automated provisioning.
 * **AirGap-Auditor:** Zero-dependency PowerShell compliance engine for PKI and AD environments.
 * **State-Ops-Controller:** Stateful PowerShell network transition controller for isolated VLANs.
 

@@ -8,6 +8,7 @@ import {
   Terminal,
   Shield,
   Network,
+  Server,
   ExternalLink,
   ChevronRight,
   ArrowUp,
@@ -30,6 +31,14 @@ const PROJECTS = [
     description:
       "A highly available, private-only web architecture. Enforces defense-in-depth with IAP-only SSH, zero public IPs on compute instances, and automated tfsec security scanning via GitHub Actions.",
     link: "https://github.com/s3nafps/GCP-Fortress-Architecture",
+  },
+  {
+    title: "GCP-Kube-Vanguard",
+    icon: Server,
+    tags: ["Terraform", "GCP", "GKE", "Kubernetes"],
+    description:
+      "A secure Google Kubernetes Engine (GKE) deployment featuring private cluster topology, strict network policies, and automated provisioning.",
+    link: "https://github.com/s3nafps/GCP-Kube-Vanguard",
   },
   {
     title: "AirGap-Auditor",
