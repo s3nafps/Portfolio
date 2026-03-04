@@ -29,7 +29,7 @@ const PROJECTS = [
     tags: ["Terraform", "GCP", "CI/CD", "GitHub Actions"],
     description:
       "A highly available, private-only web architecture. Enforces defense-in-depth with IAP-only SSH, zero public IPs on compute instances, and automated tfsec security scanning via GitHub Actions.",
-    link: "https://github.com/s3nafps",
+    link: "https://github.com/s3nafps/GCP-Fortress-Architecture",
   },
   {
     title: "AirGap-Auditor",
@@ -37,7 +37,7 @@ const PROJECTS = [
     tags: ["PowerShell", "Security", "Automation"],
     description:
       "A zero-dependency PowerShell compliance engine designed for highly regulated environments. Automates PKI certificate monitoring, AD audits, and endpoint security validation.",
-    link: "https://github.com/s3nafps",
+    link: "https://github.com/s3nafps/AirGap-Auditor",
   },
   {
     title: "State-Ops-Controller",
@@ -45,7 +45,7 @@ const PROJECTS = [
     tags: ["PowerShell", "Networking", "Fortinet"],
     description:
       "A stateful network transition controller automating workstation shifts between production and air-gapped staging VLANs, integrating Fortinet CLI hooks with automatic rollback.",
-    link: "https://github.com/s3nafps",
+    link: "https://github.com/s3nafps/State-Ops-Controller",
   },
 ];
 
