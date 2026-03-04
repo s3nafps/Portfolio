@@ -68,6 +68,12 @@ const EXPERIENCE = [
     period: "Dec 2022 — Dec 2023",
     active: false,
   },
+  {
+    company: "Brandt",
+    role: "IT Operations Specialist",
+    period: "Apr 2021 — Apr 2022",
+    active: false,
+  },
 ];
 
 const SOCIAL_LINKS = [
