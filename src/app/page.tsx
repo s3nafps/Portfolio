@@ -12,6 +12,9 @@ import {
   ExternalLink,
   ChevronRight,
   ArrowUp,
+  Sparkles,
+  Layers,
+  Code2,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -116,24 +119,24 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 ${scrolled
-        ? "bg-background/80 backdrop-blur-md border-b border-border"
-        : "bg-transparent"
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "nav-glass shadow-lg shadow-black/10" : "bg-transparent"
+      }`}
     >
-      <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <a
           href="#"
-          className="font-mono text-sm font-semibold text-accent tracking-tight"
+          className="font-mono text-sm font-bold text-accent tracking-tight flex items-center gap-2"
         >
+          <span className="w-2 h-2 rounded-full bg-accent shadow-lg shadow-accent/50" />
           senator_
         </a>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-1">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted hover:text-foreground transition-colors duration-150"
+              className="px-3 py-1.5 text-sm text-muted hover:text-foreground rounded-xl hover:bg-glass-hover transition-all duration-200"
             >
               {link.label}
             </a>
@@ -148,36 +151,41 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6">
-      <div className="max-w-3xl w-full">
-        {/* Status indicator */}
-        <div className="flex items-center gap-2 mb-6">
+    <section className="min-h-screen flex items-center justify-center px-6 pt-16 relative">
+      <div className="max-w-3xl w-full animate-fade-up">
+        {/* Status pill */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-8">
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-40"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+            <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-40 animate-ping" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
           </span>
           <span className="text-xs font-mono text-muted uppercase tracking-widest">
             Available for opportunities
           </span>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+        {/* Name */}
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] text-glow">
           Mohamed{" "}
           <span className="text-accent">Senator</span>
         </h1>
 
-        <p className="mt-4 text-lg sm:text-xl font-mono text-muted leading-relaxed">
-          Systems and Infrastructure Engineer{" "}
-          <span className="text-foreground/60">|</span>{" "}
-          <span className="text-accent/80">Google Cloud Certified (ACE)</span>
+        {/* Title */}
+        <p className="mt-4 text-lg sm:text-xl text-muted leading-relaxed font-[var(--font-sans)]">
+          Systems & Infrastructure Engineer{" "}
+          <span className="text-foreground/40">·</span>{" "}
+          <span className="text-accent/90 font-medium">Google Cloud Certified (ACE)</span>
         </p>
 
         <p className="mt-6 text-base text-muted max-w-2xl leading-relaxed">
           Transitioning manual IT operations into streamlined, automated
           workflows using{" "}
           <span className="text-foreground font-medium">PowerShell</span>,{" "}
-          <span className="text-foreground font-medium">Docker</span>, and{" "}
-          <span className="text-foreground font-medium">Terraform</span>.
+          <span className="text-foreground font-medium">Docker</span>,{" "}
+          <span className="text-foreground font-medium">Terraform</span>, and{" "}
+          <span className="text-foreground font-medium">GCP</span>.
+          Focused on infrastructure architecture, security automation, and
+          cloud-native solutions.
         </p>
 
         {/* Action buttons */}
@@ -186,7 +194,7 @@ function Hero() {
             href="https://github.com/s3nafps"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-background font-mono text-sm font-semibold rounded hover:bg-accent/90 transition-colors duration-150"
+            className="inline-flex items-center gap-2 px-6 py-3 glass font-mono text-sm font-semibold text-foreground accent-glow hover:bg-glass-hover hover:border-accent/30 transition-all duration-300"
           >
             <Github size={16} />
             View GitHub
@@ -194,24 +202,42 @@ function Hero() {
           <a
             href="/Mohamed_Senator_CV.pdf"
             download
-            className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground font-mono text-sm font-semibold rounded hover:bg-surface-hover hover:border-muted transition-colors duration-150"
+            className="inline-flex items-center gap-2 px-6 py-3 glass text-muted hover:text-foreground hover:bg-glass-hover hover:border-glass-border-hover font-mono text-sm font-semibold transition-all duration-300"
           >
             <Download size={16} />
             Download CV
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-muted font-mono text-sm font-semibold rounded hover:bg-surface-hover hover:text-foreground hover:border-muted transition-colors duration-150"
+            className="inline-flex items-center gap-2 px-6 py-3 glass text-muted hover:text-foreground hover:bg-glass-hover hover:border-glass-border-hover font-mono text-sm font-semibold transition-all duration-300"
           >
             <Mail size={16} />
-            Contact Me
+            Contact
           </a>
         </div>
 
+        {/* Stats row */}
+        <div className="mt-16 grid grid-cols-3 gap-3 max-w-md">
+          {[
+            { value: "4+", label: "Years Exp", icon: Layers },
+            { value: "4", label: "Projects", icon: Code2 },
+            { value: "GCP", label: "ACE Certified", icon: Sparkles },
+          ].map((stat, i) => {
+            const Icon = stat.icon;
+            return (
+              <div key={i} className="glass px-4 py-3 text-center rounded-2xl">
+                <Icon size={14} className="text-accent/60 mx-auto mb-1" />
+                <div className="text-lg font-bold text-foreground">{stat.value}</div>
+                <div className="text-[10px] font-mono text-muted uppercase tracking-wider">{stat.label}</div>
+              </div>
+            );
+          })}
+        </div>
+
         {/* Scroll indicator */}
-        <div className="mt-20 flex items-center gap-2 text-muted/50">
-          <div className="w-px h-8 bg-border"></div>
-          <span className="text-xs font-mono">scroll</span>
+        <div className="mt-20 flex items-center gap-3 text-muted/40">
+          <div className="w-px h-10 bg-gradient-to-b from-muted/30 to-transparent" />
+          <span className="text-xs font-mono tracking-widest uppercase">scroll</span>
         </div>
       </div>
     </section>
@@ -220,44 +246,34 @@ function Hero() {
 
 /* ─── SECTION HEADER ───────────────────────────────── */
 
-function SectionHeader({
-  label,
-  title,
-}: {
-  label: string;
-  title: string;
-}) {
+function SectionHeader({ label, title }: { label: string; title: string }) {
   return (
     <div className="mb-12">
-      <span className="text-xs font-mono text-accent uppercase tracking-widest">
+      <span className="text-xs font-mono text-accent/70 uppercase tracking-[0.2em]">
         {label}
       </span>
-      <h2 className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight">
+      <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-glow">
         {title}
       </h2>
-      <div className="mt-4 w-12 h-px bg-accent/40"></div>
+      <div className="mt-4 w-16 h-0.5 rounded-full bg-gradient-to-r from-accent/60 to-transparent" />
     </div>
   );
 }
 
 /* ─── PROJECT CARD ─────────────────────────────────── */
 
-function ProjectCard({
-  project,
-}: {
-  project: (typeof PROJECTS)[number];
-}) {
+function ProjectCard({ project }: { project: (typeof PROJECTS)[number] }) {
   const Icon = project.icon;
 
   return (
-    <div className="group relative border border-border rounded-lg p-6 bg-surface hover:bg-surface-hover hover:border-muted/50 transition-colors duration-150">
+    <div className="glass p-6 flex flex-col h-full group">
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
-          <div className="flex items-center justify-center w-9 h-9 rounded bg-accent/10 text-accent">
+          <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-accent/5 text-accent border border-accent/10">
             <Icon size={18} />
           </div>
-          <h3 className="font-mono text-lg font-semibold text-foreground">
+          <h3 className="font-mono text-base font-semibold text-foreground">
             {project.title}
           </h3>
         </div>
@@ -265,7 +281,7 @@ function ProjectCard({
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted hover:text-accent transition-colors duration-150"
+          className="text-muted hover:text-accent transition-colors duration-200 shrink-0"
           aria-label={`View ${project.title} on GitHub`}
         >
           <ExternalLink size={16} />
@@ -273,11 +289,11 @@ function ProjectCard({
       </div>
 
       {/* Tags */}
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap gap-1.5 mb-4">
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="inline-block px-2 py-0.5 text-xs font-mono bg-accent/5 text-accent/80 border border-accent/10 rounded"
+            className="inline-block px-2.5 py-1 text-[11px] font-mono bg-accent/5 text-accent/70 border border-accent/10 rounded-full"
           >
             {tag}
           </span>
@@ -285,20 +301,20 @@ function ProjectCard({
       </div>
 
       {/* Description */}
-      <p className="text-sm text-muted leading-relaxed">
+      <p className="text-sm text-muted leading-relaxed flex-1">
         {project.description}
       </p>
 
-      {/* Footer link */}
-      <div className="mt-5 pt-4 border-t border-border">
+      {/* Footer */}
+      <div className="mt-5 pt-4 border-t border-glass-border">
         <a
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-xs font-mono text-muted hover:text-accent transition-colors duration-150"
+          className="inline-flex items-center gap-1.5 text-xs font-mono text-muted hover:text-accent transition-colors duration-200 group/link"
         >
           View Repository
-          <ChevronRight size={12} />
+          <ChevronRight size={12} className="group-hover/link:translate-x-0.5 transition-transform duration-200" />
         </a>
       </div>
     </div>
@@ -309,10 +325,10 @@ function ProjectCard({
 
 function Projects() {
   return (
-    <section id="projects" className="py-24 px-6">
+    <section id="projects" className="py-32 px-6">
       <div className="max-w-5xl mx-auto">
         <SectionHeader label="// projects" title="Engineering Work" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {PROJECTS.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
@@ -326,44 +342,92 @@ function Projects() {
 
 function Experience() {
   return (
-    <section id="experience" className="py-24 px-6">
+    <section id="experience" className="py-32 px-6">
       <div className="max-w-5xl mx-auto">
         <SectionHeader label="// experience" title="Career Timeline" />
         <div className="space-y-0">
           {EXPERIENCE.map((exp, index) => (
-            <div
-              key={exp.company}
-              className="relative flex gap-6 group"
-            >
+            <div key={exp.company} className="relative flex gap-6 group">
               {/* Timeline connector */}
               <div className="flex flex-col items-center">
                 <div
-                  className={`w-2.5 h-2.5 rounded-full mt-1.5 border-2 ${exp.active
-                    ? "bg-accent border-accent"
-                    : "bg-transparent border-muted/50"
-                    }`}
-                ></div>
+                  className={`w-3 h-3 rounded-full mt-1.5 border-2 transition-all duration-300 ${
+                    exp.active
+                      ? "bg-accent border-accent shadow-lg shadow-accent/30"
+                      : "bg-transparent border-muted/30 group-hover:border-muted/60"
+                  }`}
+                />
                 {index < EXPERIENCE.length - 1 && (
-                  <div className="w-px flex-1 bg-border my-1"></div>
+                  <div className="w-px flex-1 bg-gradient-to-b from-glass-border to-transparent my-1" />
                 )}
               </div>
 
               {/* Content */}
-              <div className="pb-10">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="font-mono text-xs text-muted">
-                    {exp.period}
-                  </span>
-                  {exp.active && (
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-accent bg-accent/10 px-1.5 py-0.5 rounded">
-                      current
+              <div className="pb-12 flex-1">
+                <div className="glass-strong p-5 group-hover:bg-glass transition-all duration-300">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="font-mono text-xs text-muted">
+                      {exp.period}
                     </span>
-                  )}
+                    {exp.active && (
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-accent bg-accent/10 px-2 py-0.5 rounded-full border border-accent/20">
+                        current
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-base font-semibold text-foreground">
+                    {exp.role}
+                  </h3>
+                  <p className="text-sm text-muted mt-0.5">{exp.company}</p>
                 </div>
-                <h3 className="text-base font-semibold text-foreground">
-                  {exp.role}
-                </h3>
-                <p className="text-sm text-muted mt-0.5">{exp.company}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── SKILLS SECTION ───────────────────────────────── */
+
+const SKILL_CATEGORIES = [
+  {
+    title: "Cloud & Infrastructure",
+    skills: ["Google Cloud (GCP)", "Terraform", "Docker", "Kubernetes"],
+  },
+  {
+    title: "Automation & Scripting",
+    skills: ["PowerShell", "Bash", "GitHub Actions", "CI/CD"],
+  },
+  {
+    title: "Security & Compliance",
+    skills: ["Fortinet", "PKI", "IAP", "Network Security"],
+  },
+  {
+    title: "Systems & Monitoring",
+    skills: ["Windows Server", "Linux", "Active Directory", "VLANs"],
+  },
+];
+
+function Skills() {
+  return (
+    <section id="skills" className="py-32 px-6">
+      <div className="max-w-5xl mx-auto">
+        <SectionHeader label="// skills" title="Technical Stack" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {SKILL_CATEGORIES.map((cat) => (
+            <div key={cat.title} className="glass p-5">
+              <h3 className="text-sm font-semibold text-accent mb-3 font-mono">
+                {cat.title}
+              </h3>
+              <div className="space-y-2">
+                {cat.skills.map((skill) => (
+                  <div key={skill} className="flex items-center gap-2">
+                    <div className="w-1 h-1 rounded-full bg-accent/40" />
+                    <span className="text-sm text-muted">{skill}</span>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
@@ -377,17 +441,17 @@ function Experience() {
 
 function Contact() {
   return (
-    <section id="contact" className="py-24 px-6">
+    <section id="contact" className="py-32 px-6">
       <div className="max-w-5xl mx-auto">
         <SectionHeader label="// contact" title="Get In Touch" />
 
-        <div className="border border-border rounded-lg bg-surface p-8 max-w-xl">
+        <div className="glass-strong p-8 max-w-xl">
           <p className="text-sm text-muted mb-8 leading-relaxed">
             Interested in collaborating or have a question? Reach out through
             any of the channels below.
           </p>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {SOCIAL_LINKS.map((link) => {
               const Icon = link.icon;
               return (
@@ -400,22 +464,22 @@ function Contact() {
                       ? undefined
                       : "noopener noreferrer"
                   }
-                  className="flex items-center gap-4 p-3 -mx-3 rounded hover:bg-surface-hover transition-colors duration-150 group"
+                  className="flex items-center gap-4 p-4 rounded-2xl glass hover:bg-glass-hover hover:border-glass-border-hover transition-all duration-200 group"
                 >
-                  <div className="flex items-center justify-center w-9 h-9 rounded bg-accent/10 text-accent">
-                    <Icon size={16} />
+                  <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-accent/5 text-accent border border-accent/10">
+                    <Icon size={18} />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <span className="text-sm font-medium text-foreground">
                       {link.label}
                     </span>
-                    <p className="text-xs text-muted font-mono">
+                    <p className="text-xs text-muted font-mono mt-0.5">
                       {link.href.replace("mailto:", "").replace("https://", "")}
                     </p>
                   </div>
                   <ChevronRight
-                    size={14}
-                    className="ml-auto text-muted/0 group-hover:text-muted transition-colors duration-150"
+                    size={16}
+                    className="text-muted/0 group-hover:text-muted transition-all duration-200"
                   />
                 </a>
               );
@@ -431,13 +495,13 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border py-8 px-6">
+    <footer className="border-t border-glass-border py-8 px-6">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <span className="text-xs font-mono text-muted">
           © {new Date().getFullYear()} Mohamed Senator
         </span>
-        <span className="text-xs font-mono text-muted/50">
-          Built with Next.js & Tailwind CSS
+        <span className="text-xs font-mono text-muted/40">
+          Engineered with Next.js · Glassmorphism · Tailwind CSS
         </span>
       </div>
     </footer>
@@ -460,10 +524,10 @@ function ScrollToTop() {
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="fixed bottom-6 right-6 z-50 w-10 h-10 flex items-center justify-center rounded border border-border bg-surface hover:bg-surface-hover hover:border-muted text-muted hover:text-foreground transition-colors duration-150"
+      className="fixed bottom-6 right-6 z-50 w-12 h-12 flex items-center justify-center glass hover:bg-glass-hover hover:border-glass-border-hover text-muted hover:text-accent transition-all duration-200 shadow-lg shadow-black/20"
       aria-label="Scroll to top"
     >
-      <ArrowUp size={16} />
+      <ArrowUp size={18} />
     </button>
   );
 }
@@ -474,13 +538,23 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
-        <div className="w-full max-w-5xl mx-auto h-px bg-border"></div>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="h-px bg-gradient-to-r from-transparent via-glass-border to-transparent" />
+        </div>
         <Projects />
-        <div className="w-full max-w-5xl mx-auto h-px bg-border"></div>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="h-px bg-gradient-to-r from-transparent via-glass-border to-transparent" />
+        </div>
         <Experience />
-        <div className="w-full max-w-5xl mx-auto h-px bg-border"></div>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="h-px bg-gradient-to-r from-transparent via-glass-border to-transparent" />
+        </div>
+        <Skills />
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="h-px bg-gradient-to-r from-transparent via-glass-border to-transparent" />
+        </div>
         <Contact />
       </main>
       <Footer />
