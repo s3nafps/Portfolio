@@ -5,13 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/portfolio",
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  // Vercel serves at root, VPS serves under /portfolio/
+  basePath: process.env.VERCEL ? "" : "/portfolio",
 };
 
 export default nextConfig;
