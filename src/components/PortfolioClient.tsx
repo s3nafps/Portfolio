@@ -589,7 +589,7 @@ function Experience() {
               <small>{item.company}</small>
             </span>
             <span className="post-preview-col">{item.summary}</span>
-            <span className="post-arrow">→</span>
+            <span className="post-arrow">-&gt;</span>
           </Reveal>
         ))}
       </div>
@@ -745,7 +745,7 @@ export default function PortfolioClient({
         <Contact />
       </main>
       <footer className="footer">
-        <div className="footer-left">© 2026 Mohamed Senator - Built in Algeria</div>
+        <div className="footer-left">Copyright 2026 Mohamed Senator - Built in Algeria</div>
         <div className="footer-right">
           <a href={SITE.github} target="_blank" rel="noreferrer">
             GitHub

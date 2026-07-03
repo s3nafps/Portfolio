@@ -92,6 +92,7 @@ export const SITE = {
   email: "mohamed.senator@icloud.com",
   cv: "/Mohamed_Senator_CV_2026.pdf",
   serviceMenu: "/Mohamed_Senator_Service_Menu_2026.pdf",
+  playbook: "https://github.com/s3nafps/cloud-devops-support-playbook",
 };
 
 export const FEATURED_PROJECTS: Record<string, Omit<PortfolioProject, "updatedAt" | "stars" | "archived" | "fork" | "homepage">> = {
@@ -445,5 +446,19 @@ export const PLAYBOOK_ITEMS: PlaybookItem[] = [
     delivery: "Public repo plus lead-validation tracker",
     docUrl:
       "https://github.com/s3nafps/cloud-devops-support-playbook/blob/main/career-assets/outreach-scripts.md",
+  },
+  {
+    name: "Lead Discovery System",
+    summary:
+      "Public discovery script and intake tracker for qualifying VPS and Docker leads without asking for passwords or private keys.",
+    outcomes: [
+      "Secret-safe intake questions",
+      "Package-fit qualification flow",
+      "Call notes tracker for repeated-demand evidence",
+    ],
+    audience: "Freelance lead qualification before quoting or building anything larger",
+    delivery: "Markdown intake script plus reusable CSV notes template",
+    docUrl:
+      "https://github.com/s3nafps/cloud-devops-support-playbook/blob/main/career-assets/client-discovery-and-intake.md",
   },
 ];
