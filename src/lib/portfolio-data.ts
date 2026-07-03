@@ -91,6 +91,7 @@ export const SITE = {
   linkedin: "https://linkedin.com/in/mohamedsenator",
   email: "mohamed.senator@icloud.com",
   cv: "/Mohamed_Senator_CV_2026.pdf",
+  serviceMenu: "/Mohamed_Senator_Service_Menu_2026.pdf",
 };
 
 export const FEATURED_PROJECTS: Record<string, Omit<PortfolioProject, "updatedAt" | "stars" | "archived" | "fork" | "homepage">> = {

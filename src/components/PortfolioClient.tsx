@@ -440,11 +440,11 @@ function Services() {
         action={
           <a
             className="view-all"
-            href="https://github.com/s3nafps/cloudops-rescue-kit/blob/main/docs/10-service-packages.md"
+            href={basePath(SITE.serviceMenu)}
             target="_blank"
             rel="noreferrer"
           >
-            Package notes <ArrowUpRight size={14} />
+            Service menu PDF <ArrowUpRight size={14} />
           </a>
         }
       />
