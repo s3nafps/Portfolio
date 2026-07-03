@@ -538,9 +538,10 @@ main {
   border-radius: 12px;
 }
 
-.proj-card a {
-  display: block;
+.proj-card-content {
+  display: flex;
   min-height: 100%;
+  flex-direction: column;
   padding: 2rem;
 }
 
@@ -589,10 +590,29 @@ main {
 }
 
 .proj-footer {
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.proj-links {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.proj-link {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.proj-link:hover {
+  color: var(--sun);
 }
 
 .proj-tag,

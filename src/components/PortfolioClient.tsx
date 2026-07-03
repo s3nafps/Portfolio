@@ -399,7 +399,7 @@ function Projects({
       <div className="projects-grid">
         {projects.map((project, index) => (
           <Reveal className="proj-card" key={project.repo}>
-            <a href={project.repo} target="_blank" rel="noreferrer">
+            <div className="proj-card-content">
               <div className="proj-number">
                 {String(index + 1).padStart(2, "0")} / {project.status}
               </div>
@@ -407,11 +407,18 @@ function Projects({
               <div className="proj-desc">{project.description}</div>
               <div className="proj-footer">
                 <span className="proj-tag">{project.language}</span>
-                <span className="proj-arrow">
-                  <ArrowUpRight size={15} />
-                </span>
+                <div className="proj-links">
+                  {project.homepage ? (
+                    <a className="proj-link" href={project.homepage} target="_blank" rel="noreferrer">
+                      Case study
+                    </a>
+                  ) : null}
+                  <a className="proj-arrow" href={project.repo} target="_blank" rel="noreferrer" aria-label={`Open ${project.name} on GitHub`}>
+                    <Github size={15} />
+                  </a>
+                </div>
               </div>
-            </a>
+            </div>
           </Reveal>
         ))}
       </div>
