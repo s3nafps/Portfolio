@@ -469,4 +469,18 @@ export const PLAYBOOK_ITEMS: PlaybookItem[] = [
     docUrl:
       "https://github.com/s3nafps/cloud-devops-support-playbook/blob/main/career-assets/client-discovery-and-intake.md",
   },
+  {
+    name: "Pipeline Trackers",
+    summary:
+      "CSV-based application, outreach, lead-validation, and weekly review system that keeps the 90-day plan tied to replies, interviews, proof, and revenue.",
+    outcomes: [
+      "Daily application tracking",
+      "Lead-validation and intake logging",
+      "Weekly scoreboard for signal and blockers",
+    ],
+    audience: "Job search and side-income execution when budget is limited and every action needs a result",
+    delivery: "Public CSV templates plus tracker usage guide",
+    docUrl:
+      "https://github.com/s3nafps/cloud-devops-support-playbook/blob/main/trackers/README.md",
+  },
 ];
