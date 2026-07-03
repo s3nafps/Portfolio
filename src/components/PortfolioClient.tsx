@@ -298,9 +298,14 @@ function Hero() {
               <span className="hero-asset-label">Service Menu</span>
               <span className="hero-asset-value">Fixed-scope VPS and Docker offers</span>
             </a>
-            <a className="hero-asset-card" href="https://github.com/s3nafps/cloudops-rescue-kit" target="_blank" rel="noreferrer">
-              <span className="hero-asset-label">Proof Repo</span>
-              <span className="hero-asset-value">CloudOps Rescue Kit evidence</span>
+            <a
+              className="hero-asset-card"
+              href="https://github.com/s3nafps/cloudops-rescue-kit/blob/main/docs/case-studies/sample-client-deliverables.md"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="hero-asset-label">Proof Pack</span>
+              <span className="hero-asset-value">Incident, handover, and screenshot evidence</span>
             </a>
           </div>
         </div>
