@@ -66,7 +66,7 @@ export type GithubRepo = {
 
 export const SITE = {
   name: "Mohamed Senator",
-  title: "Infrastructure & Automation Engineer",
+  title: "Cloud / DevOps Support Engineer",
   location: "Algiers, Algeria",
   github: "https://github.com/s3nafps",
   linkedin: "https://linkedin.com/in/mohamedsenator",
@@ -75,6 +75,26 @@ export const SITE = {
 };
 
 export const FEATURED_PROJECTS: Record<string, Omit<PortfolioProject, "updatedAt" | "stars" | "archived" | "fork" | "homepage">> = {
+  "cloudops-rescue-kit": {
+    name: "CloudOps Rescue Kit",
+    repo: "https://github.com/s3nafps/cloudops-rescue-kit",
+    description:
+      "Practical VPS and Docker support toolkit for diagnostics, endpoint checks, monitoring, backup/restore proof, incident reports, and client handover notes.",
+    language: "Shell",
+    topics: ["docker", "vps", "linux", "monitoring", "backup", "cloud-support"],
+    status: "featured",
+    visual: "generic",
+    featured: true,
+    problem:
+      "Small teams often run Docker apps on a VPS with no clear diagnostics, monitoring, tested backup, or handover notes when something breaks.",
+    built:
+      "A GitHub-ready support toolkit with Bash diagnostics, health checks, Docker Compose volume backups, restore testing, Uptime Kuma setup, runbooks, and a reproducible demo lab for screenshots.",
+    architecture:
+      "Portable Bash scripts, Docker Compose monitoring/demo files, Markdown runbooks, GitHub Actions shell syntax checks, and a case-study workflow designed for low-cost VPS operations.",
+    security:
+      "Diagnostics avoid environment variables and Docker inspect output by default, logs are opt-in, restore commands require explicit confirmation, and docs enforce no secret sharing.",
+    technologies: ["Bash", "Docker", "Docker Compose", "Linux", "Uptime Kuma", "GitHub Actions"],
+  },
   Stacksmith: {
     name: "Stacksmith",
     repo: "https://github.com/s3nafps/Stacksmith",
@@ -280,9 +300,9 @@ export const SKILL_GROUPS: { title: string; icon: LucideIcon; items: string[] }[
     items: ["PowerShell", "Bash", "Go", "Docker", "Docker Compose", "Terraform", "OpenTofu", "Git", "GitHub Actions", "CI/CD"],
   },
   {
-    title: "Cloud and platforms",
+    title: "Cloud and support",
     icon: Cloud,
-    items: ["Google Cloud Platform", "Compute Engine", "VPC", "IAP", "Load Balancing", "GKE", "Kubernetes", "Cloud NAT"],
+    items: ["Google Cloud Platform", "Compute Engine", "VPC", "IAP", "Load Balancing", "Linux VPS", "Cloudflare", "Support runbooks"],
   },
   {
     title: "Network and security",
@@ -292,7 +312,7 @@ export const SKILL_GROUPS: { title: string; icon: LucideIcon; items: string[] }[
   {
     title: "Operations and self-hosting",
     icon: Database,
-    items: ["Linux", "Caddy", "n8n", "PostgreSQL", "Uptime Kuma", "GLPI", "ServiceDesk Plus", "ITIL", "Incident management"],
+    items: ["Linux", "Caddy", "n8n", "PostgreSQL", "Uptime Kuma", "Backups", "GLPI", "ServiceDesk Plus", "Incident management"],
   },
 ];
 
@@ -303,6 +323,7 @@ export const LAB_ITEMS = [
   { label: "Reverse proxy", detail: "Caddy with authenticated subdomains", icon: Network },
   { label: "Automation", detail: "n8n, PostgreSQL, Docker Compose", icon: Workflow },
   { label: "Monitoring", detail: "Uptime Kuma and backups", icon: BadgeCheck },
+  { label: "CloudOps Kit", detail: "Diagnostics, backups, restore tests", icon: TerminalSquare },
   { label: "AI workflow", detail: "Coding agents for research, prototypes, and implementation", icon: Sparkles },
   { label: "Products", detail: "Open-source experiments and SaaS ideas", icon: GitPullRequestArrow },
   { label: "Terminal time", detail: "Vibe coding without skipping architecture or testing", icon: TerminalSquare },

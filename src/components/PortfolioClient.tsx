@@ -220,7 +220,7 @@ function TerminalCard() {
         </span>
         <span className="term-line">
           &nbsp;&nbsp;<span className="term-key">&quot;role&quot;</span>:{" "}
-          <span className="term-str">&quot;Infrastructure & Automation Engineer&quot;</span>,
+          <span className="term-str">&quot;Cloud / DevOps Support Engineer&quot;</span>,
         </span>
         <span className="term-line">
           &nbsp;&nbsp;<span className="term-key">&quot;stack&quot;</span>:{" "}
@@ -228,8 +228,8 @@ function TerminalCard() {
         </span>
         <span className="term-line">
           &nbsp;&nbsp;&nbsp;&nbsp;<span className="term-str">&quot;PowerShell&quot;</span>,{" "}
-          <span className="term-str">&quot;Terraform&quot;</span>,{" "}
-          <span className="term-str">&quot;GCP&quot;</span>
+          <span className="term-str">&quot;Docker&quot;</span>,{" "}
+          <span className="term-str">&quot;Linux VPS&quot;</span>
         </span>
         <span className="term-line">
           &nbsp;&nbsp;<span className="term-brace">]</span>,
@@ -262,17 +262,17 @@ function Hero() {
         <div>
           <div className="hero-status">
             <span className="status-dot" />
-            Available for infrastructure and automation work
+            Available for Cloud/DevOps support work
           </div>
           <h1 className="hero-name">
-            <span className="line1">Infrastructure</span>
-            <span className="line2">Automation</span>
-            <span className="line3">& Vibe Coder.</span>
+            <span className="line1">Cloud</span>
+            <span className="line2">DevOps</span>
+            <span className="line3">Support.</span>
           </h1>
           <p className="hero-desc">
-            I build secure infrastructure, PowerShell automation, cloud
-            architectures, self-hosted systems, and AI-assisted software
-            products.
+            I troubleshoot Linux VPS and Docker deployments, build monitoring
+            and backup workflows, document incidents, and turn support work into
+            repeatable automation.
           </p>
           <div className="hero-ctas">
             <a className="btn-primary" href="#projects">
@@ -345,14 +345,15 @@ function About() {
         </div>
         <Reveal>
           <p className="about-text">
-            I work at the intersection of <strong>infrastructure operations</strong>,{" "}
-            <strong>automation</strong>, security, and AI-assisted software
-            development.
+            I work at the intersection of <strong>cloud support</strong>,{" "}
+            <strong>DevOps operations</strong>, automation, security, and
+            AI-assisted software development.
           </p>
           <p className="about-text">
             I have supported enterprise and regulated environments across
             Windows Server, Active Directory, Fortinet, Google Cloud, Terraform,
-            Docker, Kubernetes, and self-hosted automation.
+            Docker, Linux VPS, monitoring, backups, Kubernetes, and self-hosted
+            automation.
           </p>
           <p className="about-text">
             As a vibe coder, I use AI coding agents to accelerate research,

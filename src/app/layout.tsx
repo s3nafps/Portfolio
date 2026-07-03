@@ -17,18 +17,24 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mohamedsenator.vercel.app"),
-  title: "Mohamed Senator - Infrastructure, Automation & Cloud Engineer",
+  title: "Mohamed Senator - Cloud / DevOps Support Engineer",
   description:
-    "Portfolio of Mohamed Senator, an infrastructure and automation engineer building secure cloud architectures, PowerShell tools, DevOps systems, self-hosted platforms, and AI-assisted software products.",
+    "Portfolio of Mohamed Senator, a Cloud and DevOps Support Engineer focused on Linux VPS operations, Docker deployments, monitoring, backups, troubleshooting, and automation.",
   keywords: [
     "Mohamed Senator",
-    "Infrastructure Engineer",
+    "Cloud Support Engineer",
+    "DevOps Support Engineer",
+    "Linux Support Engineer",
     "Automation Engineer",
     "PowerShell",
     "DevOps",
+    "Docker",
+    "Docker Compose",
+    "Linux VPS",
+    "Monitoring",
+    "Backups",
     "Google Cloud",
     "Terraform",
-    "Kubernetes",
     "Windows Server",
     "AI-assisted development",
     "Vibe coding",
@@ -41,18 +47,18 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Mohamed Senator - Infrastructure, Automation & Cloud Engineer",
+    title: "Mohamed Senator - Cloud / DevOps Support Engineer",
     description:
-      "Infrastructure, automation, cloud, self-hosting, and AI-assisted product work by Mohamed Senator.",
+      "Cloud/DevOps support, Linux VPS, Docker deployment, monitoring, backup, and automation work by Mohamed Senator.",
     type: "website",
     url: "https://mohamedsenator.vercel.app",
     siteName: "Mohamed Senator Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohamed Senator - Infrastructure, Automation & Cloud Engineer",
+    title: "Mohamed Senator - Cloud / DevOps Support Engineer",
     description:
-      "Secure infrastructure, automation tools, cloud architecture, and AI-assisted software products.",
+      "Linux VPS, Docker deployment, monitoring, backup, troubleshooting, and automation portfolio work.",
   },
 };
 

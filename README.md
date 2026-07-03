@@ -1,8 +1,12 @@
 # Mohamed Senator Portfolio
 
-A playful, modern personal portfolio for Mohamed Senator: an Infrastructure & Automation Engineer, Cloud and DevOps Engineer, Windows and PowerShell Automation Engineer, Infrastructure Builder, AI-assisted developer, and vibe coder.
+A playful, modern personal portfolio for Mohamed Senator: a Cloud / DevOps Support Engineer focused on Linux VPS operations, Docker deployments, monitoring, backups, troubleshooting, infrastructure automation, and AI-assisted development.
 
-The redesign presents the site as a personal operating system for infrastructure work: large expressive headings, floating navigation, animated project architecture cards, a lab control panel, light and dark themes, and CV-backed professional content.
+The redesign presents the site as a personal operating system for support-ready infrastructure work: large expressive headings, floating navigation, animated project architecture cards, a lab control panel, light and dark themes, and CV-backed professional content.
+
+Current featured support project:
+
+- [CloudOps Rescue Kit](https://github.com/s3nafps/cloudops-rescue-kit) - VPS/Docker diagnostics, health checks, monitoring, backup/restore proof, incident reports, and client handover notes.
 
 ## Technology Stack
 
