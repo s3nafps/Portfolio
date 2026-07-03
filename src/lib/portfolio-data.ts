@@ -74,6 +74,15 @@ export type ServicePackage = {
   docUrl: string;
 };
 
+export type PlaybookItem = {
+  name: string;
+  summary: string;
+  outcomes: string[];
+  audience: string;
+  delivery: string;
+  docUrl: string;
+};
+
 export const SITE = {
   name: "Mohamed Senator",
   title: "Cloud / DevOps Support Engineer",
@@ -390,5 +399,50 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
     delivery: "Scripted steps, restore proof, and handover notes",
     docUrl:
       "https://github.com/s3nafps/cloudops-rescue-kit/blob/main/docs/10-service-packages.md",
+  },
+];
+
+export const PLAYBOOK_ITEMS: PlaybookItem[] = [
+  {
+    name: "CV and LinkedIn Positioning",
+    summary:
+      "Cloud/DevOps Support positioning pack with a CV rewrite, LinkedIn headline options, About section, and featured project copy.",
+    outcomes: [
+      "Support-focused CV framing",
+      "LinkedIn headline and About text",
+      "Featured project wording tied to public proof",
+    ],
+    audience: "Recruiters, hiring managers, and support-oriented application workflows",
+    delivery: "Public Markdown assets ready to adapt",
+    docUrl:
+      "https://github.com/s3nafps/cloud-devops-support-playbook/blob/main/career-assets/CV-cloud-devops-support.md",
+  },
+  {
+    name: "Job Search System",
+    summary:
+      "Target role filters, Boolean searches, and application tracking built for remote and EMEA Cloud/DevOps Support roles.",
+    outcomes: [
+      "Role and location filters",
+      "Daily application tracker",
+      "Tailoring rules by keyword and support focus",
+    ],
+    audience: "Cloud support and junior DevOps job search over a 30-day sprint",
+    delivery: "Tracker plus repeatable application workflow",
+    docUrl:
+      "https://github.com/s3nafps/cloud-devops-support-playbook/blob/main/career-assets/job-search-filters.md",
+  },
+  {
+    name: "Outreach and Validation",
+    summary:
+      "Fixed-scope package docs, outreach scripts, and demand-validation rules for VPS and Docker support work before building anything larger.",
+    outcomes: [
+      "Freelance package scope and pricing",
+      "Upwork, Fiverr, founder, and agency scripts",
+      "Validation thresholds before any SaaS work",
+    ],
+    audience: "Early freelance delivery and side-income testing with limited budget",
+    delivery: "Public repo plus lead-validation tracker",
+    docUrl:
+      "https://github.com/s3nafps/cloud-devops-support-playbook/blob/main/career-assets/outreach-scripts.md",
   },
 ];

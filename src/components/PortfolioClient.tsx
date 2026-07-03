@@ -14,6 +14,7 @@ import {
   CERTIFICATIONS,
   EXPERIENCE,
   LAB_ITEMS,
+  PLAYBOOK_ITEMS,
   SERVICE_PACKAGES,
   SITE,
   SKILL_GROUPS,
@@ -29,6 +30,7 @@ const navItems = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Services", href: "#services" },
+  { label: "Playbook", href: "#playbook" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Lab", href: "#lab" },
@@ -481,6 +483,59 @@ function Services() {
   );
 }
 
+function Playbook() {
+  return (
+    <section id="playbook" className="section bordered-section">
+      <SectionTitle
+        label="Playbook"
+        title="Career and client"
+        accent="system."
+        action={
+          <a
+            className="view-all"
+            href="https://github.com/s3nafps/cloud-devops-support-playbook"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open repo <ArrowUpRight size={14} />
+          </a>
+        }
+      />
+      <div className="services-grid">
+        {PLAYBOOK_ITEMS.map((item) => (
+          <Reveal className="service-card" key={item.name}>
+            <div className="service-top">
+              <div>
+                <div className="service-name">{item.name}</div>
+                <div className="service-price">Public playbook</div>
+              </div>
+              <span className="platform-badge">Execution</span>
+            </div>
+            <p className="service-summary">{item.summary}</p>
+            <div className="service-meta">
+              <span>{item.audience}</span>
+              <span>{item.delivery}</span>
+            </div>
+            <ul className="service-outcomes">
+              {item.outcomes.map((outcome) => (
+                <li key={outcome}>{outcome}</li>
+              ))}
+            </ul>
+            <a
+              className="service-link"
+              href={item.docUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open asset <ArrowUpRight size={14} />
+            </a>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Skills() {
   return (
     <section id="skills" className="section bordered-section">
@@ -669,6 +724,7 @@ export default function PortfolioClient({
         <About />
         <Projects projects={projects} projectSource={projectSource} />
         <Services />
+        <Playbook />
         <Skills />
         <Experience />
         <Lab />
