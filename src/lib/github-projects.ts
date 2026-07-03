@@ -38,7 +38,9 @@ function toPortfolioProject(repo: GithubRepo): PortfolioProject {
       repo: repo.html_url,
       language: repo.language || featured.language,
       topics: repo.topics?.length ? repo.topics : featured.topics,
-      homepage: isValidHomepage(repo.homepage) ? repo.homepage : undefined,
+      homepage:
+        featured.homepage ||
+        (isValidHomepage(repo.homepage) ? repo.homepage : undefined),
       stars: repo.stargazers_count,
       updatedAt: repo.updated_at,
       archived: repo.archived,

@@ -95,10 +95,12 @@ export const SITE = {
   playbook: "https://github.com/s3nafps/cloud-devops-support-playbook",
 };
 
-export const FEATURED_PROJECTS: Record<string, Omit<PortfolioProject, "updatedAt" | "stars" | "archived" | "fork" | "homepage">> = {
+export const FEATURED_PROJECTS: Record<string, Omit<PortfolioProject, "updatedAt" | "stars" | "archived" | "fork">> = {
   "cloudops-rescue-kit": {
     name: "CloudOps Rescue Kit",
     repo: "https://github.com/s3nafps/cloudops-rescue-kit",
+    homepage:
+      "https://github.com/s3nafps/cloudops-rescue-kit/blob/main/docs/case-studies/sample-client-deliverables.md",
     description:
       "Practical VPS and Docker support toolkit for diagnostics, endpoint checks, monitoring, backup/restore proof, incident reports, and client handover notes.",
     language: "Shell",
@@ -119,6 +121,7 @@ export const FEATURED_PROJECTS: Record<string, Omit<PortfolioProject, "updatedAt
   Stacksmith: {
     name: "Stacksmith",
     repo: "https://github.com/s3nafps/Stacksmith",
+    homepage: undefined,
     description:
       "Open-source, self-hostable platform for generating curated Terraform or OpenTofu infrastructure blueprints and creating reviewable GitHub pull requests without permanent cloud credentials.",
     language: "TypeScript",
@@ -139,6 +142,7 @@ export const FEATURED_PROJECTS: Record<string, Omit<PortfolioProject, "updatedAt
   "AirGap-Auditor": {
     name: "AirGap-Auditor",
     repo: "https://github.com/s3nafps/AirGap-Auditor",
+    homepage: undefined,
     description:
       "Zero-dependency PowerShell compliance and workstation security auditing framework for hardened Windows, Active Directory, and PKI environments.",
     language: "PowerShell",
@@ -159,6 +163,7 @@ export const FEATURED_PROJECTS: Record<string, Omit<PortfolioProject, "updatedAt
   "State-Ops-Controller": {
     name: "State-Ops-Controller",
     repo: "https://github.com/s3nafps/State-Ops-Controller",
+    homepage: undefined,
     description:
       "Idempotent PowerShell controller for safely switching workstations between production and air-gapped VLAN profiles with validation, rollback, locking, retries, and Windows Event Log auditing.",
     language: "PowerShell",
@@ -179,6 +184,7 @@ export const FEATURED_PROJECTS: Record<string, Omit<PortfolioProject, "updatedAt
   "GCP-Fortress-Architecture": {
     name: "GCP-Fortress-Architecture",
     repo: "https://github.com/s3nafps/GCP-Fortress-Architecture",
+    homepage: undefined,
     description:
       "Secure private Google Cloud architecture using Terraform, private instances, a global load balancer, managed instance groups, IAP-only SSH, auto-healing, and CI security validation.",
     language: "HCL",
@@ -199,6 +205,7 @@ export const FEATURED_PROJECTS: Record<string, Omit<PortfolioProject, "updatedAt
   "GCP-Kube-Vanguard": {
     name: "GCP-Kube-Vanguard",
     repo: "https://github.com/s3nafps/GCP-Kube-Vanguard",
+    homepage: undefined,
     description:
       "Private GKE and Kubernetes architecture using Terraform, Workload Identity, private nodes, Cloud NAT, Artifact Registry, least-privilege IAM, and CI/CD.",
     language: "HCL",
@@ -219,6 +226,7 @@ export const FEATURED_PROJECTS: Record<string, Omit<PortfolioProject, "updatedAt
   Portfolio: {
     name: "Portfolio",
     repo: "https://github.com/s3nafps/Portfolio",
+    homepage: "https://portfolio-s3nafps-projects.vercel.app",
     description:
       "Evolving open-source personal website and design experiment for presenting infrastructure, automation, cloud, and AI-assisted product work.",
     language: "TypeScript",
