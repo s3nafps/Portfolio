@@ -64,6 +64,16 @@ export type GithubRepo = {
   fork: boolean;
 };
 
+export type ServicePackage = {
+  name: string;
+  price: string;
+  summary: string;
+  outcomes: string[];
+  audience: string;
+  delivery: string;
+  docUrl: string;
+};
+
 export const SITE = {
   name: "Mohamed Senator",
   title: "Cloud / DevOps Support Engineer",
@@ -333,4 +343,52 @@ export const CERTIFICATIONS = [
   "Google Cloud Associate Cloud Engineer - issued February 2026",
   "Selected Google Cloud Skills Boost: Terraform, IAM and service accounts, secure networking, internal load balancing, cloud security fundamentals",
   "Technicien Superieur, BTS in Database Management - INSFP Baiche Abdelkader, Setif",
+];
+
+export const SERVICE_PACKAGES: ServicePackage[] = [
+  {
+    name: "VPS Docker Health Check",
+    price: "$60 fixed",
+    summary:
+      "Fast diagnosis for a Linux VPS or Docker host with a concise remediation report.",
+    outcomes: [
+      "Host and Docker diagnostics",
+      "Ports, disk, memory, and restart review",
+      "Incident summary with next actions",
+    ],
+    audience: "Founders and small teams with one VPS or one Docker host",
+    delivery: "Same-day or next-day report",
+    docUrl:
+      "https://github.com/s3nafps/cloudops-rescue-kit/blob/main/docs/10-service-packages.md",
+  },
+  {
+    name: "Monitoring and Alerts Setup",
+    price: "$120 fixed",
+    summary:
+      "Baseline monitoring with Uptime Kuma, alert routing, and a simple runbook for recurring checks.",
+    outcomes: [
+      "Uptime Kuma deployment",
+      "Public endpoint and container checks",
+      "Alert routing and operator notes",
+    ],
+    audience: "Teams that need visibility before outages become support tickets",
+    delivery: "Deployment notes plus screenshot-ready evidence",
+    docUrl:
+      "https://github.com/s3nafps/cloudops-rescue-kit/blob/main/docs/11-market-validation.md",
+  },
+  {
+    name: "Backup and Restore Proof",
+    price: "$150 fixed",
+    summary:
+      "Backup workflow setup with an actual restore test so the client has evidence, not assumptions.",
+    outcomes: [
+      "Volume or database backup routine",
+      "Restore walkthrough in a test path",
+      "Handover checklist and retention notes",
+    ],
+    audience: "Operators who cannot afford silent backup failures",
+    delivery: "Scripted steps, restore proof, and handover notes",
+    docUrl:
+      "https://github.com/s3nafps/cloudops-rescue-kit/blob/main/docs/10-service-packages.md",
+  },
 ];

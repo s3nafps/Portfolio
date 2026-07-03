@@ -14,6 +14,7 @@ import {
   CERTIFICATIONS,
   EXPERIENCE,
   LAB_ITEMS,
+  SERVICE_PACKAGES,
   SITE,
   SKILL_GROUPS,
   type PortfolioProject,
@@ -27,6 +28,7 @@ type PortfolioClientProps = {
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
+  { label: "Services", href: "#services" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Lab", href: "#lab" },
@@ -426,6 +428,59 @@ function Projects({
   );
 }
 
+function Services() {
+  return (
+    <section id="services" className="section bordered-section">
+      <SectionTitle
+        label="Services"
+        title="Fixed-scope"
+        accent="support."
+        action={
+          <a
+            className="view-all"
+            href="https://github.com/s3nafps/cloudops-rescue-kit/blob/main/docs/10-service-packages.md"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Package notes <ArrowUpRight size={14} />
+          </a>
+        }
+      />
+      <div className="services-grid">
+        {SERVICE_PACKAGES.map((service) => (
+          <Reveal className="service-card" key={service.name}>
+            <div className="service-top">
+              <div>
+                <div className="service-name">{service.name}</div>
+                <div className="service-price">{service.price}</div>
+              </div>
+              <span className="platform-badge">Fixed scope</span>
+            </div>
+            <p className="service-summary">{service.summary}</p>
+            <div className="service-meta">
+              <span>{service.audience}</span>
+              <span>{service.delivery}</span>
+            </div>
+            <ul className="service-outcomes">
+              {service.outcomes.map((outcome) => (
+                <li key={outcome}>{outcome}</li>
+              ))}
+            </ul>
+            <a
+              className="service-link"
+              href={service.docUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Evidence and scope <ArrowUpRight size={14} />
+            </a>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Skills() {
   return (
     <section id="skills" className="section bordered-section">
@@ -613,6 +668,7 @@ export default function PortfolioClient({
         <Hero />
         <About />
         <Projects projects={projects} projectSource={projectSource} />
+        <Services />
         <Skills />
         <Experience />
         <Lab />
