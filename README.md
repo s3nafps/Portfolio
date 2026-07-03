@@ -84,7 +84,18 @@ The legacy filename is also refreshed for compatibility:
 public/Mohamed_Senator_CV.pdf
 ```
 
-To update the CV, replace `public/Mohamed_Senator_CV_2026.pdf` and update any content in `src/lib/portfolio-data.ts` that changed.
+Editable source lives in:
+
+```text
+cv/generate_cv_pdf.py
+cv/README.md
+```
+
+Regenerate the public PDFs with:
+
+```powershell
+C:\Users\s3nafps\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe .\cv\generate_cv_pdf.py
+```
 
 ## Local Development
 
