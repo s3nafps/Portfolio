@@ -64,16 +64,6 @@ export type GithubRepo = {
   fork: boolean;
 };
 
-export type ServicePackage = {
-  name: string;
-  price: string;
-  summary: string;
-  outcomes: string[];
-  audience: string;
-  delivery: string;
-  docUrl: string;
-};
-
 export type PlaybookItem = {
   name: string;
   summary: string;
@@ -91,7 +81,6 @@ export const SITE = {
   linkedin: "https://linkedin.com/in/mohamedsenator",
   email: "mohamed.senator@icloud.com",
   cv: "/Mohamed_Senator_CV_2026.pdf",
-  serviceMenu: "/Mohamed_Senator_Service_Menu_2026.pdf",
   playbook: "https://github.com/s3nafps/cloud-devops-support-playbook",
 };
 
@@ -226,7 +215,7 @@ export const FEATURED_PROJECTS: Record<string, Omit<PortfolioProject, "updatedAt
   Portfolio: {
     name: "Portfolio",
     repo: "https://github.com/s3nafps/Portfolio",
-    homepage: "https://portfolio-s3nafps-projects.vercel.app",
+    homepage: "https://mohamedsenator.vercel.app",
     description:
       "Evolving open-source personal website and design experiment for presenting infrastructure, automation, cloud, and AI-assisted product work.",
     language: "TypeScript",
@@ -364,54 +353,6 @@ export const CERTIFICATIONS = [
   "Technicien Superieur, BTS in Database Management - INSFP Baiche Abdelkader, Setif",
 ];
 
-export const SERVICE_PACKAGES: ServicePackage[] = [
-  {
-    name: "VPS Docker Health Check",
-    price: "$60 fixed",
-    summary:
-      "Fast diagnosis for a Linux VPS or Docker host with a concise remediation report.",
-    outcomes: [
-      "Host and Docker diagnostics",
-      "Ports, disk, memory, and restart review",
-      "Incident summary with next actions",
-    ],
-    audience: "Founders and small teams with one VPS or one Docker host",
-    delivery: "Same-day or next-day report",
-    docUrl:
-      "https://github.com/s3nafps/cloudops-rescue-kit/blob/main/docs/10-service-packages.md",
-  },
-  {
-    name: "Monitoring and Alerts Setup",
-    price: "$120 fixed",
-    summary:
-      "Baseline monitoring with Uptime Kuma, alert routing, and a simple runbook for recurring checks.",
-    outcomes: [
-      "Uptime Kuma deployment",
-      "Public endpoint and container checks",
-      "Alert routing and operator notes",
-    ],
-    audience: "Teams that need visibility before outages become support tickets",
-    delivery: "Deployment notes plus screenshot-ready evidence",
-    docUrl:
-      "https://github.com/s3nafps/cloudops-rescue-kit/blob/main/docs/11-market-validation.md",
-  },
-  {
-    name: "Backup and Restore Proof",
-    price: "$150 fixed",
-    summary:
-      "Backup workflow setup with an actual restore test so the client has evidence, not assumptions.",
-    outcomes: [
-      "Volume or database backup routine",
-      "Restore walkthrough in a test path",
-      "Handover checklist and retention notes",
-    ],
-    audience: "Operators who cannot afford silent backup failures",
-    delivery: "Scripted steps, restore proof, and handover notes",
-    docUrl:
-      "https://github.com/s3nafps/cloudops-rescue-kit/blob/main/docs/10-service-packages.md",
-  },
-];
-
 export const PLAYBOOK_ITEMS: PlaybookItem[] = [
   {
     name: "CV and LinkedIn Positioning",
@@ -444,13 +385,13 @@ export const PLAYBOOK_ITEMS: PlaybookItem[] = [
   {
     name: "Outreach and Validation",
     summary:
-      "Fixed-scope package docs, outreach scripts, and demand-validation rules for VPS and Docker support work before building anything larger.",
+      "Outreach scripts and demand-validation rules for testing buyer language before building anything larger.",
     outcomes: [
-      "Freelance package scope and pricing",
       "Upwork, Fiverr, founder, and agency scripts",
       "Validation thresholds before any SaaS work",
+      "Repeatable notes on what buyers actually ask for",
     ],
-    audience: "Early freelance delivery and side-income testing with limited budget",
+    audience: "Networking and market validation when budget is limited and proof matters more than volume",
     delivery: "Public repo plus lead-validation tracker",
     docUrl:
       "https://github.com/s3nafps/cloud-devops-support-playbook/blob/main/career-assets/outreach-scripts.md",

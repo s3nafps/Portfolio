@@ -4,7 +4,7 @@ A playful, modern personal portfolio for Mohamed Senator: a Cloud / DevOps Suppo
 
 The redesign presents the site as a personal operating system for support-ready infrastructure work: large expressive headings, floating navigation, animated project architecture cards, a lab control panel, light and dark themes, and CV-backed professional content.
 
-Current featured support project:
+Current featured project:
 
 - [CloudOps Rescue Kit](https://github.com/s3nafps/cloudops-rescue-kit) - VPS/Docker diagnostics, health checks, monitoring, backup/restore proof, incident reports, and client handover notes.
 
