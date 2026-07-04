@@ -2,9 +2,9 @@
 
 A playful, modern personal portfolio for Mohamed Senator: a Cloud / DevOps Support Engineer focused on Linux VPS operations, Docker deployments, monitoring, backups, troubleshooting, infrastructure automation, and AI-assisted development.
 
-The redesign presents the site as a personal operating system for support-ready infrastructure work: large expressive headings, floating navigation, animated project architecture cards, a lab control panel, light and dark themes, and CV-backed professional content.
+The site presents infrastructure work as a personal operating system: large headings, floating navigation, project architecture cards, a lab control panel, light and dark themes, and CV-backed professional content.
 
-Current featured project:
+## Featured Project
 
 - [CloudOps Rescue Kit](https://github.com/s3nafps/cloudops-rescue-kit) - VPS/Docker diagnostics, health checks, monitoring, backup/restore proof, incident reports, and client handover notes.
 
@@ -51,7 +51,7 @@ Projects are loaded on the server from:
 https://api.github.com/users/s3nafps/repos?per_page=100&sort=updated
 ```
 
-Behavior:
+Repository-loading behavior:
 
 - Uses Next.js `fetch` caching with `revalidate: 3600`
 - Works without credentials for public repositories
@@ -68,9 +68,9 @@ Optional environment variable:
 GITHUB_TOKEN=github_pat_or_token_here
 ```
 
-Do not expose this token with a `NEXT_PUBLIC_` prefix.
+`GITHUB_TOKEN` is a server-side setting and is excluded from any `NEXT_PUBLIC_` prefix.
 
-## CV
+## CV Assets
 
 The latest CV is published at:
 
@@ -84,14 +84,14 @@ The legacy filename is also refreshed for compatibility:
 public/Mohamed_Senator_CV.pdf
 ```
 
-Editable source lives in:
+Editable source:
 
 ```text
 cv/generate_cv_pdf.py
 cv/README.md
 ```
 
-Regenerate the public PDFs with:
+PDF generation command:
 
 ```powershell
 C:\Users\s3nafps\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe .\cv\generate_cv_pdf.py
@@ -104,7 +104,7 @@ npm install
 npm run dev
 ```
 
-The existing `next.config.ts` keeps the local base path as `/portfolio` when not running on Vercel. Local preview URL:
+`next.config.ts` keeps the local base path as `/portfolio` when not running on Vercel. Local preview URL:
 
 ```text
 http://localhost:3000/portfolio
@@ -122,15 +122,15 @@ There are no test files in this repository yet, so no test suite runs by default
 
 ## Vercel Deployment
 
-Push the repository to GitHub and connect it to Vercel. On Vercel, the base path is `/` and server-side GitHub project revalidation works normally.
+On Vercel, the base path is `/` and server-side GitHub project revalidation works normally.
 
-Recommended optional setting:
+Optional setting:
 
 ```text
 GITHUB_TOKEN
 ```
 
-This raises API reliability for GitHub project loading but is not required.
+This improves API reliability for GitHub project loading but is not required.
 
 ## Accessibility And Motion
 
@@ -158,11 +158,7 @@ Animations are intentionally lightweight and avoid video, audio, and heavy 3D sc
 
 ## Content Notes
 
-The site describes vibe coding professionally:
-
-> I use AI coding agents to accelerate research, prototyping, and implementation while remaining responsible for architecture, security decisions, testing, infrastructure, and deployment.
-
-The portfolio intentionally does not display Mohamed's phone number, private infrastructure details, credentials, private IP addresses, fake metrics, testimonials, client logos, or invented screenshots.
+The site describes AI-assisted development in practical engineering terms and excludes private infrastructure details, credentials, internal IP addresses, fabricated metrics, testimonials, client logos, and invented screenshots.
 
 ## License
 
