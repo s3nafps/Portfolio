@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/build-worker.mjs",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build:sites": "next build && node scripts/build-worker.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.576.0",
