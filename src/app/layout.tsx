@@ -1,74 +1,41 @@
 import type { Metadata } from "next";
-import { Space_Mono, Syne } from "next/font/google";
 import "./globals.css";
-
-const syne = Syne({
-  subsets: ["latin"],
-  variable: "--font-syne",
-  display: "swap",
-});
-
-const spaceMono = Space_Mono({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-space-mono",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mohamedsenator.vercel.app"),
-  title: "Mohamed Senator - Cloud / DevOps Support Engineer",
+  title: "Mohamed Senator — Infrastructure, Cloud & Automation",
   description:
-    "Portfolio of Mohamed Senator, a Cloud and DevOps Support Engineer focused on Linux VPS operations, Docker deployments, monitoring, backups, troubleshooting, and automation.",
+    "Portfolio of Mohamed Senator, an IT infrastructure and Cloud/DevOps support engineer building secure automation, operational tools, and AI-assisted products.",
   keywords: [
     "Mohamed Senator",
-    "Cloud Support Engineer",
-    "DevOps Support Engineer",
-    "Linux Support Engineer",
-    "Automation Engineer",
+    "Cloud DevOps Support Engineer",
+    "IT Infrastructure",
     "PowerShell",
-    "DevOps",
     "Docker",
-    "Docker Compose",
-    "Linux VPS",
-    "Monitoring",
-    "Backups",
-    "Google Cloud",
     "Terraform",
-    "Windows Server",
-    "AI-assisted development",
-    "Vibe coding",
+    "Cybersecurity",
     "Algeria",
   ],
   authors: [{ name: "Mohamed Senator" }],
   creator: "Mohamed Senator",
-  robots: {
-    index: true,
-    follow: true,
-  },
   openGraph: {
-    title: "Mohamed Senator - Cloud / DevOps Support Engineer",
-    description:
-      "Cloud/DevOps support, Linux VPS, Docker deployment, monitoring, backup, and automation work by Mohamed Senator.",
+    title: "Mohamed Senator — Infrastructure, Cloud & Automation",
+    description: "Secure systems. Useful automation. Operational proof.",
     type: "website",
     url: "https://mohamedsenator.vercel.app",
-    siteName: "Mohamed Senator Portfolio",
+    siteName: "Mohamed Senator",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohamed Senator - Cloud / DevOps Support Engineer",
-    description:
-      "Linux VPS, Docker deployment, monitoring, backup, troubleshooting, and automation portfolio work.",
+    title: "Mohamed Senator — Infrastructure, Cloud & Automation",
+    description: "Secure systems. Useful automation. Operational proof.",
   },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-theme="dark" className={`${syne.variable} ${spaceMono.variable}`}>
+    <html lang="en">
       <body>{children}</body>
     </html>
   );
