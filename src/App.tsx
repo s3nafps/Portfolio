@@ -266,7 +266,7 @@ function Work() {
   return (
     <section id="work">
       <Stack direction="vertical" gap={4}>
-        <Heading level={2}>Work</Heading>
+        <Heading level={2} className="section-heading">Work</Heading>
         <TabList value={category} onChange={(v) => setCategory(v as Category)} hasDivider>
           {CATEGORIES.map((c) => (
             <Tab key={c} value={c} label={c} />
@@ -274,7 +274,7 @@ function Work() {
         </TabList>
         <Grid columns={{ minWidth: 300, max: 2, repeat: 'fit' }} gap={4}>
           {visible.map((p) => (
-            <ClickableCard key={p.name} label={`${p.name} repository`} href={p.repo} target="_blank" padding={4}>
+            <ClickableCard key={p.name} className="proj-card" label={`${p.name} repository`} href={p.repo} target="_blank" padding={4}>
               <Stack direction="vertical" gap={3}>
                 <HStack hAlign="between" vAlign="center" wrap="wrap" gap={2}>
                   <Heading level={3}>{p.name}</Heading>
@@ -302,7 +302,7 @@ function Capabilities() {
   return (
     <section id="capabilities">
       <Stack direction="vertical" gap={4}>
-        <Heading level={2}>Capabilities</Heading>
+        <Heading level={2} className="section-heading">Capabilities</Heading>
         <Grid columns={{ minWidth: 300, max: 2, repeat: 'fill' }} gap={4}>
           {CAPABILITIES.map((c) => (
             <Card key={c.title} padding={4}>
@@ -331,7 +331,7 @@ function Experience() {
   return (
     <section id="experience">
       <Stack direction="vertical" gap={4}>
-        <Heading level={2}>Experience</Heading>
+        <Heading level={2} className="section-heading">Experience</Heading>
         <List hasDividers density="spacious">
           {EXPERIENCE.map((e) => (
             <ListItem
@@ -359,7 +359,7 @@ function SecurityResearch() {
   return (
     <section id="security">
       <Stack direction="vertical" gap={4}>
-        <Heading level={2}>Security research</Heading>
+        <Heading level={2} className="section-heading">Security research</Heading>
         <Grid columns={{ minWidth: 240, max: 2, repeat: 'fill' }} gap={4}>
           {SECURITY_ITEMS.map((s) => (
             <Stack key={s.title} direction="vertical" gap={1}>
@@ -384,7 +384,7 @@ function Contact() {
   return (
     <section id="contact">
       <Stack direction="vertical" gap={4}>
-        <Heading level={2}>Contact</Heading>
+        <Heading level={2} className="section-heading">Contact</Heading>
         <Link href="mailto:mohamed.senator@icloud.com" size="2xl" weight="medium" hasUnderline>
           mohamed.senator@icloud.com
         </Link>
