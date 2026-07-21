@@ -1,47 +1,33 @@
-# Mohamed Senator — Portfolio
+# portfolio-astryx
 
-Personal portfolio for **Mohamed Senator**, Cloud & DevOps Support Engineer
-based in Algiers, Algeria.
+Personal portfolio for Mohamed Senator — Cloud & DevOps Support Engineer.
 
-Live: **https://mohamedsenator.vercel.app**
+Built with Vite + React + TypeScript on Meta's Astryx design system
+(`@astryxdesign/core` + `@astryxdesign/theme-neutral`). Astryx ships pre-built
+CSS/JS — no build plugins needed. The neutral theme is applied via the `Theme`
+provider and its tokens are overridden in `src/index.css` for the custom
+editorial palette (near-white paper, hairlines, olive accent).
 
-## What's inside
-
-Single-page site covering:
-
-- **Profile** — background, certification (Google Cloud ACE, Feb 2026), education
-- **Selected work** — public infrastructure and automation projects
-- **Working set** — support operations, systems & network, cloud & DevOps, automation
-- **Security research** — authorized bug bounty methodology and platform profiles
-- **Experience** — AGCE, Agrofilm Packaging, Samsung, IRIS Electronics / Brandt
-- **Contact** — email, LinkedIn, GitHub, HackerOne, plus CV download
-
-## Stack
-
-- React 19 + TypeScript + Vite
-- Tailwind CSS (custom design tokens in `src/index.css`)
-- Typography: Fraunces, Inter, JetBrains Mono (Google Fonts)
-- No component library, no analytics, no trackers
-
-## Develop
+## Setup
 
 ```bash
 npm install
-npm run dev
+npm run dev        # vite dev server (accepts -- --host --port)
+npm run build      # type-check + production build to dist/
+npm run preview    # serve the production build locally
 ```
 
-## Build
+## Deploy to Vercel
 
-```bash
-npm run build   # outputs static site to dist/
-```
+Import the repo in Vercel — it auto-detects Vite:
 
-Deploys on Vercel as a Vite project (build command `npm run build`,
-output directory `dist`).
+- Build command: `npm run build`
+- Output directory: `dist`
+- No `vercel.json` needed (single page, no client-side routing).
 
-## Content
+## Notes
 
-All copy lives in `src/lib/data.ts` — edit there to update projects,
-experience, links, and focus areas.
-
-© 2026 Mohamed Senator
+- `public/Mohamed_Senator_CV_2026.pdf` is served as the downloadable CV —
+  replace it when the CV changes.
+- Astryx component docs are available locally:
+  `node node_modules/@astryxdesign/core/docs.mjs --list`
