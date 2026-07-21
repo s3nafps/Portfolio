@@ -1,4 +1,49 @@
-/* Layout-only styles. All colors come from Astryx neutral theme tokens. */
+/* Layout-only styles. Colors come from Astryx neutral theme tokens,  */
+/* with a restrained signature accent layered on top.                  */
+
+/* ---------- signature accent: olive ---------- */
+/* Unlayered on purpose so it beats the layered theme.css @scope rules. */
+
+[data-astryx-theme='neutral'] {
+  --color-accent: #64743f;
+  --color-text-accent: #5c6d39;
+  --color-icon-accent: #64743f;
+  --color-on-accent: #ffffff;
+  --color-accent-muted: #eef0e3;
+}
+
+[data-astryx-theme='neutral'][data-theme='dark'],
+[data-astryx-theme='neutral'][data-astryx-media='dark'],
+[data-astryx-theme='neutral'] [data-astryx-media='dark'] {
+  --color-accent: #a9bd7a;
+  --color-text-accent: #b3c787;
+  --color-icon-accent: #a9bd7a;
+  --color-on-accent: #1c2113;
+  --color-accent-muted: #2c3222;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+/* Section headings get a small accent marker */
+.section-heading::before {
+  content: '';
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+  margin-right: 0.6em;
+  background: var(--color-accent);
+}
+
+/* Project cards: accent border on hover */
+.proj-card {
+  transition: border-color 0.15s ease;
+}
+.proj-card:hover {
+  border-color: var(--color-accent);
+}
 
 html {
   scroll-behavior: smooth;
